@@ -1,8 +1,8 @@
-const  listadoProd= document.querySelector(".sliderWrapper");
+const  listadoProd= document.querySelector(".prod");
 const menuItems = document.querySelectorAll(".menuItem");
 
 
-const products = [
+const productos = [
     {
       id: 1,
       titulo: "Minifalda Gabardina",
@@ -49,7 +49,7 @@ const products = [
       ],
     },
     {
-      id: 1,
+      id: 4,
       titulo: "Minifalda Gabardina",
       precio: 1000,
       colores: [
@@ -64,7 +64,7 @@ const products = [
       ],
     },
     {
-      id: 1,
+      id: 5,
       titulo: "Minifalda Gabardina",
       precio: 1000,
       colores: [
@@ -79,7 +79,7 @@ const products = [
       ],
     },
     {
-      id: 1,
+      id: 6,
       titulo: "Minifalda Gabardina",
       precio: 1000,
       colores: [
@@ -94,7 +94,7 @@ const products = [
       ],
     },
     {
-      id: 1,
+      id: 7,
       titulo: "Minifalda Gabardina",
       precio: 1000,
       colores: [
@@ -109,7 +109,7 @@ const products = [
       ],
     },
     {
-      id: 1,
+      id: 8,
       titulo: "Minifalda Gabardina",
       precio: 1000,
       colores: [
@@ -124,7 +124,7 @@ const products = [
       ],
     },
     {
-      id: 1,
+      id: 9,
       titulo: "Minifalda Gabardina",
       precio: 1000,
       colores: [
@@ -139,7 +139,7 @@ const products = [
       ],
     },
     {
-      id: 1,
+      id: 10,
       titulo: "Minifalda Gabardina",
       precio: 1000,
       colores: [
@@ -160,56 +160,36 @@ const products = [
 let productoElegido = productos[0];
 
 const prodImgActual = document.querySelector(".prodImg");
-const listaTituloActual = document.querySelector(".productTitle");
-const listaPrecioActual= document.querySelector(".productPrice");
+const listaTituloActual = document.querySelector(".tituloProd");
+const listaPrecioActual= document.querySelector(".listaPrecio");
 const coloresProdActual = document.querySelectorAll(".color");
-const talleProdActual = document.querySelectorAll(".size");
+const talleProdActual = document.querySelectorAll(".talle");
 
-menuItems.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    //change the current slide
-    wrapper.style.transform = `translateX(${-100 * index}vw)`;
-
-    //change the choosen product
-    choosenProduct = products[index];
-
-    //change texts of currentProduct
-    currentProductTitle.textContent = choosenProduct.title;
-    currentProductPrice.textContent = "$" + choosenProduct.price;
-    currentProductImg.src = choosenProduct.colors[0].img;
-
-    //assing new colors
-    currentProductColors.forEach((color, index) => {
-      color.style.backgroundColor = choosenProduct.colors[index].code;
-    });
-  });
-});
-
-currentProductColors.forEach((color, index) => {
+coloresProdActual.forEach((color, index) => {
   color.addEventListener("click", () => {
-    currentProductImg.src = choosenProduct.colors[index].img;
+    prodImgActual.src = prodElegido.colores[index].img;
   });
 });
 
-currentProductSizes.forEach((size, index) => {
-  size.addEventListener("click", () => {
-    currentProductSizes.forEach((size) => {
-      size.style.backgroundColor = "white";
-      size.style.color = "black";
+  talleProdActual.forEach((talle, index) => {
+  talle.addEventListener("click", () => {
+    talleProdActual.forEach((talle) => {
+      talle.style.backgroundColor = "blanco";
+      talle.style.color = "negro";
     });
-    size.style.backgroundColor = "black";
-    size.style.color = "white";
+    size.style.backgroundColor = "negro";
+    size.style.color = "blanco";
   });
 });
 
-const productButton = document.querySelector(".productButton");
-const payment = document.querySelector(".payment");
-const close = document.querySelector(".close");
+const botonCompra = document.querySelector(".botonCompra");
+const pago = document.querySelector(".pago");
+const salir = document.querySelector(".salir");
 
-productButton.addEventListener("click", () => {
-  payment.style.display = "flex";
+botonCompra.addEventListener("click", () => {
+  pago.style.display = "flex";
 });
 
-close.addEventListener("click", () => {
-  payment.style.display = "none";
+salir.addEventListener("click", () => {
+  pago.style.display = "none";
 });

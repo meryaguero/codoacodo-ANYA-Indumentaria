@@ -18,23 +18,36 @@
    <h1>MARCA</h1>
 </header>
 
-<nav id="navegacion">
-  <div class="navbar"></div>
-</nav> 
+
+
+<nav id="nav">
+  <div class="navTop">
+      <div class="navItem">
+          <div class="buscar">
+              <input type="text" placeholder="Buscar..." class="busqueda">
+          </div>
+      </div>
+  </div>
+  <div class="navBottom">
+      <h4 class="menuItem">POLLERAS</h4>
+      <h4 class="menuItem">REMERAS</h4>
+      <h4 class="menuItem">JEANS</h4>
+      <h4 class="menuItem">ACCESORIOS</h4>
+    
+      
+  </div>
+</nav>
+
 
 <div class="grid-layout">  
 
-<!--promoción animada-->                    
-<div class="sale" id="sale">
-  <p>SALE</p>
-</div>
 
 
 <!--CARROUSEL-->
 <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }' id="carousel">
-    <div class="gallery-cell" style="background-image:url(imgs/carousel1.png)"></div>
+    <div class="gallery-cell" style="background-image:url(imgs/carousel1.jpg)"></div>
     <div class="gallery-cell" style="background-image:url(imgs/carousel2.jpg)"></div>
-    <div class="gallery-cell" style="background-image:url(imgs/carousel3.png)"></div>
+    <div class="gallery-cell" style="background-image:url(imgs/carousel3.jpg)"></div>
 </div>
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -44,7 +57,7 @@
 <!--NEWSLETTER-->
   <div class="newsletter">
 
-    <form method="post" class="formNewsletter" action="">
+    <form method="post" class="Newsletter" action="">
         <p>Suscríbete a nuestro NEWSLETTER</p>
               <label for="email" class"etiquetaemail"></label><br>
                 <input type="email" id="email" placeholder="ejemplo@gmail.com">
@@ -54,7 +67,7 @@
   </div>
             
             
-     <footer id="footer">footer</footer>
+<footer id="footer">footer</footer>
     
 </body>
 

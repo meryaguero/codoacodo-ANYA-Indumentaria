@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+  height: auto;
+}
 
 /*NOMBRE*/
 h1{
@@ -16,6 +20,8 @@ body{
     
 }
 
+
+
 /*GRID PRINCIPAL*/
 
 .grid-layout{
@@ -29,39 +35,62 @@ body{
 
 
 /*BARRA DE NAVEGACIÓN-MENÚ*/
-.navbar{
-    display:grid;
-    grid-column: 1/8; 
-    background-color: pink;
-    height: 8vh;
-    margin-top:1vh;
-    margin-bottom:1vh;
-    margin-left:1vh;
-    margin-right:1vh;
+
+
+nav {
+  background-color: rgb(95, 94, 94);
+  color: black;
+  padding: 2vh 5vh;
+}
+
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  padding: 1vh 2vh;
+  border-radius: 1vh;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+}
+
+.busqueda::placeholder {
+  color: lightgray;
+}
+
+.navBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.menuItem {
+  margin-right: 50px;
+  cursor: pointer;
+  color: lightgray;
+  font-weight: 400;
 }
 
 
-/*CARTELERA DE DESCUENTOS-SALE*/
-/*PUEDE SER UNA ANIMACIÓN CON PORCENTAJES DE DESCUENTOS*/
-.sale{
-    display:grid;
-    align-content: center;
-    background-color: rgb(177, 102, 207);
-    grid-column: 2/8;
-    height: 15vh;
-    margin-top:1vh;
-    margin-bottom:1vh;
-    margin-left:1vh;
-    margin-right:1vh;
-}
+
+
 
 /*CARROUESEL DE IMÁGENES DE LA MARCA*/
 
 #carousel{
   align-content: center;
   display:grid;
-  background-color: rgb(177, 102, 207);
-  grid-column: 1/9;
+  background-color: black;
+  grid-column: 2/8;
   height: 50vh;
   margin-top:1vh;
   margin-bottom:1vh;
@@ -94,14 +123,6 @@ body{
     font-size: medium;
     color: white;
   }
-
-
-/*CARROUSEL A MODIFICAR SI FUESE NECESARIO*/
-
-
-
-* {box-sizing:border-box}
-
 
 
 
@@ -150,8 +171,6 @@ form {
 
 
 
-
-
 /*FOOTER-REDES SOCIALES*/
 footer{
     display:grid;
@@ -174,13 +193,8 @@ P{
 /*TIENDA*/
 
 #header {grid-area: header;}
-/*Menú*/
-#navegacion {grid-area: menu;}
-/*Principal*/
+#nav {grid-area: nav;}
 .grid-area {grid-area: main;}
-/*Aside*/
-.aside {grid-area: aside;}
-/*Pie*/
 #footer {grid-area: footer;}
 
 .grid-area {
@@ -188,7 +202,7 @@ P{
     grid-template-areas:
         /*6 columnas y 3 filas*/
         'header header header header'
-        'menu menu menu menu'
+        'nav nav nav nav'
         'main main main aside'
         'aside aside aside aside'
         'footer footer footer footer';
@@ -291,37 +305,7 @@ P{
   transition: all 1.5s ease-in-out;
 }
 
-.asides {
-  display: flex;
-  display: block;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2%;
-}
 
-.aside {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.asideIcono {
-  width: 5vh;
-  height: 5vh;
-}
-
-.asideTitulo {
-  font-size: 2vh;
-  font-weight: 600;
-  margin: 2%;
-}
-
-.asideDesc {
-  color: black;
-  width: 50%;
-  height: 100%;
-}
 
 .productos {
   height: 100vh;
@@ -468,28 +452,191 @@ label {
 
 .productoBoton {
   float: right;
-  padding: 10px 20px;
+  padding: 1vh 2vh;
   background-color: black;
   color: white;
   font-weight: 600;
   cursor: pointer;
 }
 
-.producto:hover {
+.listaProd {
+  display: flex;
+  width: 500vw;
+  transition: all 1.5s ease-in-out;
+}
+
+.sliderItem {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sliderBg {
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.sliderImg {
+  z-index: 1;
+}
+
+.sliderTitle {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.sliderPrice {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 60px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  border: 1px solid gray;
+  z-index: 1;
+}
+
+.buyButton {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  border: 1px solid gray;
+  background-color: black;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.buyButton:hover {
   background-color: white;
   color: black;
 }
 
-.galeria {
-  padding: 2vh;
+.sliderItem:nth-child(1) .sliderBg {
+  background-color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderBg {
+  background-color: rebeccapurple;
+}
+.sliderItem:nth-child(3) .sliderBg {
+  background-color: teal;
+}
+.sliderItem:nth-child(4) .sliderBg {
+  background-color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderBg {
+  background-color: rgb(124, 115, 80);
+}
+
+.sliderItem:nth-child(1) .sliderPrice {
+  color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderPrice {
+  color: white;
+}
+.sliderItem:nth-child(3) .sliderPrice {
+  color: teal;
+}
+.sliderItem:nth-child(4) .sliderPrice {
+  color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderPrice {
+  color: cornsilk;
+}
+
+.pago {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: none;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pagoTitulo {
+  font-size: 20px;
+  color: lightgray;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.datoPago {
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.datoPago::placeholder {
+  color: rgb(163, 163, 163);
+}
+
+.tarjIcons {
   display: flex;
 }
 
-.galeriaItem {
-  flex: 1;
-  padding: 2vh;
+.tarjIcon {
+  margin-right: 10px;
 }
 
-.galeriaImg {
+.tarjetaInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sm {
+  width: 30%;
+}
+
+.botonCompra {
+  position: fixed;
+  height: 8vh;
+  bottom: -40;
   width: 100%;
+  left: 0;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.salir {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
 }
