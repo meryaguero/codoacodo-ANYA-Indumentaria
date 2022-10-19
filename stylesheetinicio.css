@@ -1,0 +1,193 @@
+html {
+  scroll-behavior: smooth;
+  height: auto;
+}
+
+/*NOMBRE*/
+h1{
+    color:hsl(324, 59%, 82%);
+    text-align: center;
+    text-decoration-line: line-through;
+}
+h4{
+    color:hsl(324, 59%, 82%);
+    text-decoration-line: underline;
+
+}
+
+body{
+    background-color:pink;
+    
+}
+
+
+
+/*GRID PRINCIPAL*/
+
+.grid-layout{
+    display:grid;
+    grid-template-columns: repeat(8, 0.5fr);
+    height:auto;
+    background-image: url("imgs/holo4.jpg");
+    background-image: stretch; 
+    background-repeat:round;
+}
+
+
+/*BARRA DE NAVEGACIÓN-MENÚ*/
+
+
+nav {
+  background-color: rgb(95, 94, 94);
+  color: black;
+  padding: 2vh 5vh;
+}
+
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  padding: 1vh 2vh;
+  border-radius: 1vh;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+}
+
+.busqueda::placeholder {
+  color: lightgray;
+}
+
+.navBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.menuItem {
+  margin-right: 50px;
+  cursor: pointer;
+  color: lightgray;
+  font-weight: 400;
+}
+
+
+
+
+
+/*CARROUESEL DE IMÁGENES DE LA MARCA*/
+
+#carousel{
+  align-content: center;
+  display:grid;
+  background-color: black;
+  grid-column: 2/8;
+  height: 50vh;
+  margin-top:1vh;
+  margin-bottom:1vh;
+  margin-left:1vh;
+  margin-right:1vh;
+}
+
+.style {
+  height: auto;
+}
+  
+  .gallery {
+    background: #EEE;
+  }
+  
+  .gallery-cell {
+    width: 50%;
+    height: 50vh;
+    margin-right: 1vh;
+    background: rgb(241, 161, 188);
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 20vh;
+    font-size: medium;
+    color: white;
+  }
+
+
+
+/*NEWSLETTER*/
+/*ACORDARME DE CAMBIAR EL MIN DEL DISPOSITIVO PARA QUE NO APAREZCA EN DISPOSITIVOS PEQUEÑOS*/
+.newsletter{
+    display:grid;
+    background-color:rgb(213, 231, 229);
+    grid-column: 1/9;
+    height: 10vh;
+    margin-top:1vh;
+    margin-bottom:1vh;
+    margin-left:1vh;
+    margin-right:1vh;
+    font-size: smaller;
+}
+
+/*FORMULARIO NEWSLETTER*/
+form {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  form input {
+    width: 90%;
+    margin: 0.5rem;
+  }
+ 
+  button {
+    padding: 0.5em 0.5em;
+    margin-right: 1vh;
+    border: none;
+    background: turquoise;
+    cursor: pointer;
+    color: white;
+    width: 20%;
+    position: relative;
+    
+  }
+
+
+
+
+
+/*FOOTER-REDES SOCIALES*/
+footer{
+    display:grid;
+    background-color: pink;
+    grid-column: 1/9;
+    height: 7vh;
+    margin-top:1vh;
+    margin-bottom:1vh;
+    margin-left:1vh;
+    margin-right:1vh;
+} 
+
+
+P{
+    text-align: center;
+    font-size: smaller;
+    font-style: italic;
+}
+
+

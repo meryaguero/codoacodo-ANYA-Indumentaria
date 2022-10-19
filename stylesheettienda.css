@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /*header provisorio para guiarme*/
+  header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background: black;
+  }
+  
+  a {
+    color: white;
+    transition-duration: 1s; /*transición*/
+    font-weight: 800;
+  }
+ 
+  ion-icon {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+  }
+  ion-icon:hover {
+    cursor: pointer;
+  }
+ 
+  .seccion2 .container {
+    display: flex;
+    width: 100%;
+    height:fit-content;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: 10px auto;
+    align-items: center;
+  }
+  .seccion2 .container .items {
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border: 2.5px solid black;
+    border-radius: 12px;
+  }
+  .seccion2 .container .items .nombre {
+    text-align: center;
+    background-color: pink;
+    height: 25px;
+    padding-top: 4px;
+    color: black;
+    margin: 0;
+  }
+  .seccion2 .container .items .precio {
+    float: left;
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+  }
+  .seccion2 .container .items .info {
+    padding-left: 10px;
+    color: black;
+  }
+  .seccion2 .container .items .img img {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;
+    transition-duration: 0.8s;
+  }
+  .seccion2 .container .items .img {
+    overflow: hidden;
+    margin: 0;
+  }
+  .seccion2 .container .items:hover .img img {
+    transform: scale(1.2);
+    transition-duration: 0.8s;
+    border-radius: 12px;
+  }
+  footer {
+    display: column;
+    width: 100%;
+    flex-direction: row;
+    background-color: pink;
+    align-items: center;
+    color: black;
+  }
+  
+  h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin-top: 15px;
+  }
+
+  .footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin-top: 15px;
+  }
+  .redes-sociales {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+  }
+  .redes-sociales a {
+    color: white;
+    margin: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+  }
+  .redes-sociales a ion-icon {
+    color: white;
+    background-color: black;
+  }
+  .redes-sociales a:hover ion-icon {
+    color: gray;
+    transform: translateY(5px);
+  }
+  .footer2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+  }
+  .footer0 {
+    font-weight: 1200;
+    transition-duration: 1s;
+  }
+  .footer0:hover {
+    color: gray;
+  }
+  .footer2 .heading {
+    font-weight: 900;
+    font-size: 18px;
+  }
+  .footer3 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer2:hover {
+    color: gray;
+  }
+  .footer2 .div:hover {
+    transform: scale(1.05);
+  }
+  .footer3 h4 {
+    margin: 0 10px;
+  }
+  .footer2 div {
+    margin: 10px;
+  }
+  .items {
+    overflow: hidden;
+  }
+ 
+  
+  @media only screen and (max-width: 1200px) {
+   
+    .items {
+      transform: scale(0.9);
+    }
+   
+    }
+
+  /*formulario de compra*/
+
+  .productButton:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .productButton {
+    float: right ;
+    padding: 1vh;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .productButton:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .payment {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .payTitle {
+    font-size: 20px;
+    color: lightgray;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+  
+  .payInput::placeholder {
+    color: rgb(163, 163, 163);
+  }
+  
+  .cardIcons {
+    display: flex;
+  }
+  
+  .cardIcon {
+    margin-right: 10px;
+  }
+  
+  .cardInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sm {
+    width: 30%;
+  }
+  
+  .payButton {
+    position: absolute;
+    height: 40px;
+    bottom: -40;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #369e62;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+  }
+
+
+
+@media only screen and (max-width: 480px) {
+ 
+  .footer{
+      width: 100%;
+      height: 5vh;
+  }
+
+  .img{
+    width: 100%;
+}
+
+  .seccion2{
+    width: 100%;
+  }
+
+  .ayuda {
+    display: none;
+  }
+  .producto {
+    display: none;
+  }
+  .servicios {
+    display: none;
+  }
+  .empresa {
+    display: none;
+  }
+
+  ion-icon{
+    width: 4vh;
+    height: 4vh;
+
+  }
+
+  h1{
+    display: none;
+  }
+
+  .footer2{
+    display: none;
+  }
+
+  .footer3{
+    display: none;
+  }
+
+}
