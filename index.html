@@ -5,50 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheetinicio.css">
 
-    <title>TRABAJO FINAL CODO A CODO</title>
+    <title>INICIO</title>
     
 </head>
 
 <body>
  
 <!--ENCABEZADO-->
-<header id="header">
-   <h1>MARCA</h1>
-</header>
+<header>
+    <div class="logo"><a href="#">EMME</a></div>
+        <div class="menu">
+            <a href="index.html">
+        <ion-icon name="cerrar" class="cerrar"></ion-icon>
+      </a>
+
+    <div class="buscar">
+
+      <a href=""><input type="text" placeholder="Buscar productos" id="input">
+        <ion-icon class="s" name="buscar"></ion-icon>
+      </a>
+    </div>
 
 
+    <div class="heading">
+      <ul>
+        <li><a href="#" class="under">HOME</a></li>
+            <li><a href="#seccion2" class="under">SHOP</a></li>
+                <li><a href="#seccion2" class="under">PRODUCTOS</a></li>
+            <li><a href="#footer" class="under">CONTÁCTANOS</a></li>
+        <li><a href="#footer" class="under">ABOUT</a></li>
+      </ul>
+    </div>
 
-<nav id="nav">
-  <div class="navTop">
-      <div class="navItem">
-          <div class="buscar">
-              <input type="text" placeholder="Buscar..." class="busqueda">
-          </div>
-      </div>
-  </div>
-  <div class="navBottom">
-      <h4 class="menuItem">POLLERAS</h4>
-      <h4 class="menuItem">REMERAS</h4>
-      <h4 class="menuItem">JEANS</h4>
-      <h4 class="menuItem">ACCESORIOS</h4>
-    
-      
-  </div>
-</nav>
-
-
-<div class="grid-layout">  
-
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
 
 
 <!--CARROUSEL-->
-<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }' id="carousel">
-    <div class="gallery-cell" style="background-image:url(imgs/carousel1.jpg)"></div>
-    <div class="gallery-cell" style="background-image:url(imgs/carousel2.jpg)"></div>
-    <div class="gallery-cell" style="background-image:url(imgs/carousel3.jpg)"></div>
-</div>
+<section>
+    <div class="section1">
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }' id="carousel">
+            <div class="gallery-cell" style="background-image:url(imgs/carousel1.jpg)"></div>
+            <div class="gallery-cell" style="background-image:url(imgs/carousel2.jpg)"></div>
+            <div class="gallery-cell" style="background-image:url(imgs/carousel3.jpg)"></div>
+        </div>
+    </div>
+</section><br>
+
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
@@ -57,18 +64,65 @@
 <!--NEWSLETTER-->
   <div class="newsletter">
 
-    <form method="post" class="Newsletter" action="">
-        <p>Suscríbete a nuestro NEWSLETTER</p>
-              <label for="email" class"etiquetaemail"></label><br>
+    <div class="formulario">
+        <form method="post" class="newsletter" action="">
+        <p>NEWSLETTER</p>   
+              
+    <div class="email">
+        <label for="email" class"etiquetaemail"></label>
                 <input type="email" id="email" placeholder="ejemplo@gmail.com">
-                    <button type="submit" >Enviar</button>
-                </form>
+           <button type="submit" class="enviar">Enviar</button>
+    </div>           
+    </form>
+  </div>
 
   </div>
             
-            
-<footer id="footer">footer</footer>
+<!--FOOTER-->            
+  <footer>
+    <div id="#footer" class="footer0">
+      <h1>EMME</h1>
+    </div>
     
+    <div class="footer1">
+      <div class="redes-sociales">
+        <a href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer2">
+      <div class="producto">
+       
+      </div>
+      <div class="servicios">
+        <div class="heading">Servicios</div>
+          <div class="div">Devoluciones</div>
+          <div class="div">Devoluciones de dinero</div>
+          <div class="div">Marketing</div>
+      </div>
+    
+      <div class="ayuda">
+        <div class="heading">Ayuda</div>
+            <div class="div">Privacidad</div>
+          <div class="div">Terminos y condiciones</div>
+        <div class="div">Login</div>
+      </div>
+    </div>
+    
+    <div class="footer3">Copyright ©2022 <h4>EMME</h4></div>
+</footer>
+    
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="tienda.js"></script>
+
 </body>
 
 </html>
