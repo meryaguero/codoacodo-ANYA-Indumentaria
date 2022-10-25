@@ -19,15 +19,15 @@ cerrar.addEventListener("click", () => {
 });
 
 
-/*API DE GOOGLE */
-function validateForm() {
+/*log in: api font de google. Validación de log in */
+function validar() {
   
   
   var username=document.forms["loginEmail"]["username"].value;
   var passowrd=document.forms["loginEmail"]["password"].value;
   
   
-  if ((username == "KeithSimpson") && (password == "KeithSimpson10")) {
+  if ((username == "LuisAguirre") && (password == "LuisAguirre10")) {
            window.location.href = 'inbox.html';
             return false;
         }
